@@ -4,6 +4,7 @@ import CurrencyPanel from '../../components/CurrencyPanel';
 import { getRates, setValue, selectFirstCurrency, selectSecondCurrency } from '../../store/actions/ratesActions';
 import logo from '../../assets/logo-open-exchange-rates-white.png';
 import PropTypes from 'prop-types';
+import './Main.scss';
 
 const INTERVAL = 10000;
 // @TODO use slick or other slider
@@ -12,7 +13,7 @@ const INTERVAL = 10000;
 // @TODO add spinner (for bigger app) 
 // @TODO use redux-saga (for bigger app)
 // @TODO use custom eslint || tslint (and typescript || flow)
-// @TODO use scss / styled components (css-in-js)
+// @TODO use styles encapsulation e.g. by css-in-js
 
 const Header = () => (
     <header className="currencies-header">
@@ -69,7 +70,7 @@ class Main extends React.PureComponent {
         } = this;
 
         return (
-            <div className="App">
+            <div className="currencies-app">
                 <Header />
 
                 <div className="currencies-panels-list">

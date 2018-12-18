@@ -1,0 +1,110 @@
+@import '../styles/media.scss';
+
+.currencies-panels-list {
+  height: 80%;
+
+  @include mid-phones() {
+    height: 70%;
+  }
+
+  @include phones() {
+    height: 80%;
+  }
+}
+
+.currencies {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+
+  &:first-of-type::after {
+    position: absolute;
+    top: calc(50% - 1px);
+    content: '';
+    border: 20px solid transparent;
+    border-top: 20px solid steelblue;
+  }
+
+  &:last-of-type {
+    background-color: royalblue;
+    justify-content: flex-start;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    
+    @include mid-phones() {
+      margin: 10px;
+
+    }
+    @include phones() {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    padding: 10px;
+    margin: 5px;
+    font-size: 20px;
+    width: 130px;
+
+    @include mid-phones() {
+      padding: 5px;
+      margin: 0px;
+      width: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include phones() {
+      width: 150px;
+      display: block;
+    }
+  }
+
+  &__chosen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    width: 300px;
+
+    @include mid-phones() {
+      font-size: 20px;
+      width: 200px;
+    }
+  }
+
+  &__input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    text-align: right;
+    width: 200px;
+
+    @include mid-phones() {
+      font-size: 20px;
+      width: 150px;
+    }
+  }
+
+  &__input::placeholder{
+    color: rgba(255, 255, 255, 0.5)
+  }
+
+  &__additional {
+    font-size: 12px;
+
+    @include mid-phones() {
+      margin-left: 5px;
+    }
+  }
+}

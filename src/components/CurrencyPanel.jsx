@@ -1,5 +1,6 @@
 import React from 'react';
 import { emptifyValue, getRateForCurrency as getRates, truncateToTwoSigns, isNumber } from '../helpers/helper';
+import './CurrencyPanel.scss';
 
 const chosenStyles = (flag) => ({
     'border': flag ? '1px solid white' : '1px solid transparent'
