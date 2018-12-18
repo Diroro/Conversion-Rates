@@ -1,9 +1,9 @@
 {
-  "name": "to-do-list",
+  "name": "currency-conversion",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "firebase": "^5.7.0",
+    "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^6.0.0",
@@ -25,5 +25,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "^3.8.0"
+  }
 }
