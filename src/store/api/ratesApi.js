@@ -14,8 +14,8 @@ const key = '28ffa4e26e514173844989cb339a3502';
 
 export const getRatesRequest = (baseCurrency = 'USD') =>
     fetch(`https://openexchangerates.org/api/latest.json?app_id=${key}&base=${baseCurrency}`)
-        .then((response) => {
-            const res = response.json();
+        .then((response) => response.json())
+        .then(res => {
             const { EUR, GBP } = res.rates;
             return {...res, rates: { EUR, GBP }};
         });

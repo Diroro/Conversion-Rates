@@ -21,8 +21,8 @@ export const getRates = (baseCurrency = 'USD') => {
     // but it will lead to more request sent and the plan will be expired sooner
     return (dispatch) => {
         dispatch(getRatesStarted());
-        // getRatesRequest(baseCurrency)
-        exampleRatesRequest()
+        getRatesRequest(baseCurrency)
+        // exampleRatesRequest()
             .then((res) => {
                 dispatch(getRatesSuccess({rawRates: res.rates, baseCurrency}));
             })
